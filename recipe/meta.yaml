@@ -1,5 +1,5 @@
 {% set name = "xraydb" %}
-{% set version = "4.4.5" %}
+{% set version = "4.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/xraypy/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 99d20c4c3d7d000f9acf75a86f8e572a6b011ada767cb6add6e23713d859ff69
+  sha256: 99d153362c7e64e68b9d9ecd0fac2b3aa8337185164e794ed73586ae0160e7c2
 
 build:
   number: 0
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip
   run:
-    - python
+    - python >=2.7
     - numpy
     - scipy
     - sqlalchemy
