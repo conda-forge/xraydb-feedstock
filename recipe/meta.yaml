@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/xraypy/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 99d153362c7e64e68b9d9ecd0fac2b3aa8337185164e794ed73586ae0160e7c2
+  sha256: 96f19913475cf26853366838fd6ef59a3e74dd576f10192063daaf696b604630
 
 build:
   number: 1
