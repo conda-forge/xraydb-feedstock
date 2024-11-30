@@ -10,21 +10,23 @@ source:
   sha256: 9200c7fadd95c2e3916c982d840e5ff616c6a2d75412021456379a5c8ac61435
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: cd python && {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=2.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - numpy
     - scipy
     - sqlalchemy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - xraydb
 
