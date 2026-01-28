@@ -1,5 +1,6 @@
 {% set name = "XrayDB" %}
 {% set version = "4.5.8" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -12,25 +13,25 @@ source:
 build:
   number: 0
   noarch: python
-  script: cd python && {{ PYTHON }} -m pip install . --no-deps -vv
+  script: cd python && {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   host:
-    - python >=3.9
+    - python >={{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=64
   run:
-    - python >=3.9
-    - numpy >=1.19
-    - scipy >=1.6
+    - python >={{ python_min }}
+    - numpy >=2
+    - scipy >=1.13
     - sqlalchemy >=2.0.1
     - platformdirs
-    - setuptools
+    - setuptools >=64
     - packaging
 
 test:
   requires:
-    - python >=3.9
+    - python >={{ python_min }}
   imports:
     - xraydb
 
@@ -46,3 +47,5 @@ about:
 extra:
   recipe-maintainers:
     - newville
+    - maurov
+    
