@@ -1,5 +1,5 @@
 {% set name = "XrayDB" %}
-{% set version = "4.5.8" %}
+{% set version = "4.6.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/xraypy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: b09d606bf339b131e6faf6808f850a21717bc9781b9443c1f6d3c907f6c6d6a1
+  sha256: 8ef2e7cb40f3b12f32a33a301e61547778fa50daccb2b948f79f5d5c57a29455
 
 build:
   number: 0
@@ -48,4 +48,4 @@ extra:
   recipe-maintainers:
     - newville
     - maurov
-    
+
